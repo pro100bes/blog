@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+}
+.container{
+	background: url(img/background.png) no-repeat center top/ cover;
+	display: grid;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 55px 375px 380px 190px 55px;
+    grid-gap: 20px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "s s s s s s s s s s s s"
+        "b1 b1 b1 b2 b2 b2 b3 b3 b3 b4 b4 b4"
+        "c c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+.header {
+    grid-area: h;
+    text-align: center;
+    background-color: white;
+}
+.search {
+	width: 300px;
+	border: 1px solid #f4f4f4;
+}
+input[type="search"] {
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем свечение в Chrome и Safari */
+    -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+    width: 274px; /* Ширина поля */
+    vertical-align: middle; /* Выравнивание по середине */
+}
+input[type="submit"] {
+    width: 20px; /* Ширина кнопки */
+    height: 20px; /* Высота кнопки */
+    border: none; /* Убираем рамку */
+    background: url(img/shape.png) no-repeat; /* Параметры фона */
+}
+.slide {
+    grid-area: s;
+
+}
+.block_1 {
+    grid-area: b1;
+}
+.block_2 {
+    grid-area: b2;
+}
+.block_3 {
+    grid-area: b3;
+}
+.block_4 {
+    grid-area: b4;
+}
+.content {
+	grid-area: c;
+}
+.footer {
+   grid-area: f;
+}
